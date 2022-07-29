@@ -1,0 +1,160 @@
+:root{
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan:  hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    background-color: var(--veryLightGray);
+}
+
+.container{
+    display: flex;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1, 
+.card2, 
+.card3{
+    padding: 20px 15px;
+    color: var(--transparentWhite);
+}
+
+.card1{
+    background-color: var(--brightOrange);
+    padding: 2em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card2{
+    background-color: var(--darkCyan);
+    padding: 2em;
+}
+
+.card3{
+    background-color: var(--veryDarkCyan);
+    padding: 2em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.card1 img, 
+.card2 img, 
+.card3 img{
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.card1 h2, 
+.card2 h2, 
+.card3 h2{
+    color: var(--veryLightGray);
+    font-family: "Big Shoulders Display", cursive;
+    font: 30px;
+}
+
+.card1 p, 
+.card2 p, 
+.card3 p{
+    margin-top: 25px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    color: var(--transparentWhite);
+    padding-bottom: 80px;
+}
+
+
+.learnMore a {
+    font-family: "Lexend Deca", sans-serif;
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-right: 2px;
+    border: none;
+}
+
+.card1 .learnMore a{
+    color: var(--brightOrange);
+}
+
+.card2 .learnMore a{
+    color: var(--darkCyan);
+}
+
+.card3 .learnMore a{
+    color: var(--veryDarkCyan);
+}
+
+.card1 .learnMore a:hover{
+    background-color: var(--brightOrange);
+    color: var(--veryLightGray);
+    border: 2px solid;
+}
+
+.card2 .learnMore a:hover{
+    background-color: var(--darkCyan);
+    color: var(--veryLightGray);
+    border: 2px solid;
+}
+
+.card3 .learnMore a:hover{
+    background-color: var(--veryDarkCyan);
+    color: var(--veryLightGray);
+    border: 2px solid;
+}
+
+
+@media only screen and (max-width:600px){
+    .container{
+        flex-direction: column;
+    }
+
+    .card1{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .card3{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .card1 p, 
+    .card2 p, 
+    .card3 p{
+        padding-bottom: 20px;
+    }
+    .card1 p, 
+    .card2 p, 
+    .card3 p{
+        margin-bottom: 10px;
+        border-radius: 0;
+    }
+}
